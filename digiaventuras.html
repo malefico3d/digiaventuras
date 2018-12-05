@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="digiaventuras.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script>
+      var e = new Escena(1,10);
+      
+      function previa() {
+		e.previa();
+		$('escena-' + e.actual).show();  
+	  }
+      function siguiente() {
+		e.siguiente();
+		$('escena-' + e.actual).show();  
+	  }
+	  
+    </script>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>DIGIAVENTURAS CAPITULO 1</title>
+	<link rel="stylesheet" type="text/css" href="digiaventuras.css">
+</head>
+<body>
+<div class="portada" id="escena-0">
+	<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label">¡A JUGAR!</div></div>
+	<div class="logo-aprender"></div>
+	<div class="contenedor">
+		<div class="logo-digiaventuras"></div>
+		<div class="fondo-titulo"><div class="texto-titulo">La compu por dentro</div></div>
+	</div>
+	<div class="logo-ME"></div>
+</div>
+<div class="escena" id="escena-1">
+	<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	<div class="netbook">
+		<div class="webcam" id="elem1" onclick='chequearElemento()'></div>
+		<div class="pantalla" id="elem2" onclick='chequearElemento()'></div>
+		<div class="teclado" id="elem3" onclick='chequearElemento()'></div>
+		<div class="touchpad" id="elem4" onclick='chequearElemento()'></div>
+		<div class="mouse" id="elem5" onclick='chequearElemento()'></div>
+	</div>
+	<div class="elemento" id="cartel1">WEBCAM</div>
+	<div class="elemento" id="cartel2">PANTALLA</div>
+	<div class="elemento" id="cartel3">TECLADO</div>
+	<div class="elemento" id="cartel4">MOUSE</div>
+	<div class="elemento" id="cartel5">TOUCHPAD</div>
+</div>
+
+<div class="escena" id="escena-2">
+	<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	<div class="netbook-interior"></div>
+</div>
+
+
+</body>
+</html>
