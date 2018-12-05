@@ -210,6 +210,7 @@ background-image: url("imagenes/back2.svg");
 	top: 298px;
 	left: 68%;
 }
+
 .teclado, .mouse, .pantalla, .touchpad, .webcam {
 	background-repeat: no-repeat;
 	background-size: contain;

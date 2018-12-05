@@ -44,26 +44,29 @@ function mostrarProximaEscena() {
 
 function mostrarProximoElemento() {
 
-	for (var elem=1; elem<6; elem++) {
-		var id = "elem" + e;
-		var escena = document.getElementById(id);
-		if (escena != null) { 
-			escena.style.display='none';
+	for (var c=1; c<6; c++) {
+		var id = "cartel" + c;
+		var cartel = document.getElementById(id);
+		if (cartel != null) { 
+			cartel.style.display='none';
 		}
 	}
-	var id = "elem" + elem_actual;
-	var cartel_elemento = document.getElementById(id);
-	if (cartel_elemento != null) { 
-		cartel_elemento.style.display='block';
+	var id = "cartel" + elemento_actual;
+	var cartel_actual = document.getElementById(id);
+	if (cartel_actual != null) { 
+		cartel_actual.style.display='block';
 		elemento_actual++;
 		if (elemento_actual > 5){ elemento_actual=1; }
 	}
 }
 
-function chequearElemento() {
-	
-	if (elemento != item_a_identificar){
-		alert("Has hecho clic en otro elemento");
+function chequearElemento(id) {
+/*	alert(id);*/
+	e = id.substr(id.lenght - 1);
+	if (id != "cartel" + e){
+		alert("No es el elemento");
 	}
-	
+	else {
+		alert("CORRECTO");
+	}
 }
