@@ -1,0 +1,343 @@
+html {
+	height:100%;
+}
+
+body {
+	background-color:#FFFFFF;
+	margin:0;
+	height:100%;
+}
+
+.portada {
+  	background-image: url("imagenes/EXTERIOR_ARCOIRIS2-1.png");
+  	background-repeat:no-repeat;
+  	background-size: cover;
+  	background-position: center center;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+
+#escena-1 {
+	
+}
+
+#escena-2 {
+	
+}
+
+#escena-1, #escena-2 {
+	display:none;
+	
+}
+
+.escena {
+	background-image: url("imagenes/BG.png");
+  	background-repeat:no-repeat;
+  	background-size: 150%;
+  	background-origin: border-box;
+  	background-position: center center;
+	display:none;
+	width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.contenedor {
+	
+position: relative;
+margin: auto;
+border-style: dashed;
+
+}
+
+.contenedor#cabecera {
+width: 97%;
+top: 3%;
+height: 20%;
+}
+
+.contenedor#titulo {
+width: 60%;
+top: 28%;
+height: 50%;
+
+}
+
+.contenedor#netbook {
+width: 85%;
+top: 5%;
+height: 70%;
+}
+.contenedor#cabecera-actividad {
+width: 97%;
+top: 1%;
+height: 20%;
+}
+.label {
+  font-size: 31px;
+  color:white;
+  font-weight: bold;
+  text-align:center;
+}
+
+.texto-titulo {
+	color: rgb(255,212,121);
+font-family: "arial";
+font-size: 41px;
+text-align: center;
+}
+.fondo-titulo {
+	background-color: rgb(0,84,147);
+border-radius: 8px;
+height: 69px;
+box-shadow: rgb(118,118,118) 0px 0px 15px;
+width: 60%;
+margin: auto;
+}
+
+.logo-digiaventuras {
+	background-image: url("imagenes/Logo_da_nuevo.png");
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center center;
+position: relative;
+top: 0px;
+height: 212px;
+margin: auto;
+width: 90%;
+border-style: dashed;
+}
+
+.logo-aprender {
+	
+  	background-image: url("imagenes/aprender-conectados-logo.png");
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center center;
+width: 31%;
+position: relative;
+left: -36%;
+height: 61px;
+top: -92px;
+margin: auto;
+/*border-style: dashed;*/
+}
+
+.logo-ME {
+	background-image: url("imagenes/logo_ministerio.png");
+  	background-repeat:no-repeat;
+  	background-size: contain;
+  	background-position: center center;
+  	position:relative;
+width: 32%;
+right: -42%;
+top: -145px;
+height: 36px;
+margin: auto;
+/*border-style: dashed;*/
+}
+
+.info {
+  	position: relative;
+width: 50%;
+/*height: 150px;*/
+margin: auto;
+top: 5%;
+left: 0px;
+background-color: rgb(85, 182, 55);
+border-radius: 15px;
+box-shadow: rgba(0, 0, 0, 0.506) 0px 0px 15px;
+border-color: rgb(216, 221, 228);
+text-align: center;
+font-size: 1.7em;
+color: white;
+font-family: arial;
+font-weight: bold;
+padding: 8px;
+  	
+}
+
+.netbook {
+	background-image: url("imagenes/net1.png");
+	background-repeat:no-repeat;
+  	background-size: contain;
+  	background-position: center center;
+  	position: relative;
+  	width:1143px;
+  	height:688px;
+  	top:10%;
+  	left:20%;
+  	transform-origin: left, top;
+  	transform: scale(0.5);
+  	border-style:dashed;
+}
+
+.contenedor#cont-netbook {
+	position: relative;
+	width: 100%;
+	height: 80%;
+	top: 1%;
+	margin: auto;
+	border-style: dashed;
+}
+
+.netbook-interior {
+	background-image: url("imagenes/netbook3.png");
+	background-repeat:no-repeat;
+  	background-size: cover;
+  	background-position: center center;
+  	position: absolute;
+  	width:1243px;
+  	height:728px;
+  	top:0px;
+  	left:0px;
+}
+
+.boton-jugar {
+  background-color:rgb(0,84,147);
+  border-radius:8px;
+  position: relative;
+  top: 20px;
+  padding:20px;
+  width: 200px;
+  height: 69px;
+  box-shadow:rgb(118,118,118) 0px 0px 15px;
+  border-radius:45px;
+  cursor:pointer;
+  animation: titila 2s infinite;
+  animation-direction: alternate;
+  margin: auto;
+  
+}
+
+.boton-siguiente, .boton-anterior {
+background-color:transparent;
+background-repeat: no-repeat;
+	background-size: contain;
+  border-radius:100px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  box-shadow:rgb(118,118,118) 0px 0px 15px;
+  border-radius:45px;
+  cursor:pointer;
+  margin: auto;
+}
+
+.boton-siguiente {
+background-image: url("imagenes/next1.svg");
+  top: 1%;
+  right: 1%;
+ }
+
+.boton-siguiente:hover {
+background-image: url("imagenes/next2.svg");
+ }
+
+.boton-anterior {
+background-image: url("imagenes/back1.svg");
+  top: 1%;
+  left: 1%;
+}
+.boton-anterior:hover {
+background-image: url("imagenes/back2.svg");
+}
+
+/* OVERLAYS */
+
+.elemento {
+	display: none;
+	width: 400px;
+	height:4em;
+	background-color: rgb(224, 99, 55);
+  	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.506) 0px 0px 15px;
+	border-color: rgb(216, 221, 228);
+	text-align:center;
+	font-size:2em;
+	color: white;
+	position: absolute;
+	top: 298px;
+	left: 68%;
+}
+
+.teclado, .mouse, .pantalla, .touchpad, .webcam {
+	background-repeat: no-repeat;
+	background-size: contain;
+	position:relative;
+	opacity: 0;
+	
+}
+
+.teclado:hover, .mouse:hover, .pantalla:hover, .touchpad:hover, .webcam:hover {
+	background-repeat: no-repeat;
+	background-size: contain;
+	position:relative;
+	animation-fill-mode: both;
+	cursor: pointer;
+	/*animation-direction: alternate;*/
+	animation: suave 750ms infinite;
+	
+}
+
+.teclado {
+background-image: url("imagenes/teclado.png");
+width:638px;
+height:144px;
+top:58px;
+left:121px;
+}
+
+.webcam {
+background-image: url("imagenes/webcam.png");
+width:32px;
+height:31px;
+top:27px;
+left:329px;
+}
+.mouse {
+background-image: url("imagenes/mouse.png");
+width:222px;
+height:150px;
+top:-130px;
+left:921px;
+}
+.pantalla{
+background-image: url("imagenes/pantalla.png");
+width:605px;
+height:369px;
+top:32px;
+left:46px;
+}
+
+.touchpad{
+background-image: url("imagenes/touchpad.png");
+width:190px;
+height:62px;
+top:40px;
+left:420px;
+}
+
+
+/* ANIMACIONES */
+@keyframes titila {
+	0% { background-color: red;
+		transform: scale(1.1, 1.1);}
+	25% { background-color: yellow; }
+	50% { background-color: green; 
+		  transform: scale(0.8, 0.8);}
+	75% { background-color: orange; }
+	100% { background-color: red; 
+		   transform: scale(1.1, 1.1);}
+}
+
+@keyframes suave {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="digiaventuras.js"></script>
+	 <script>
+      var e = new Escena(1,10);
+      
+      function previa() {
+		e.previa();
+		$('escena-' + e.actual).show();  
+	  }
+      function siguiente() {
+		e.siguiente();
+		$('escena-' + e.actual).show();  
+	  }
+	  
+    </script>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>DIGIAVENTURAS CAPITULO 1</title>
+	<link rel="stylesheet" type="text/css" href="digiaventuras-noresize.css">
+</head>
+<body>
+<div class="portada" id="escena-0">
+	<div class="contenedor" id="cabecera">
+		<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label">¡A JUGAR!</div></div>
+		<div class="logo-aprender"></div>
+		<div class="logo-ME"></div>
+	</div>
+	<div class="contenedor" id="titulo">
+		<div class="logo-digiaventuras"></div>
+		<div class="fondo-titulo"><div class="texto-titulo">La compu por dentro</div></div>
+	</div>
+	
+</div>
+<div class="escena" id="escena-1">
+	<div class="contenedor" id="cabecera-actividad">
+		<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+		<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+		<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	</div>
+	<div class="contenedor" id="cont-netbook">
+	<div class="netbook" id="netbook">
+		<div class="webcam" id="elem1" onclick='chequearElemento(this.id)'></div>
+		<div class="pantalla" id="elem2" onclick='chequearElemento(this.id)'></div>
+		<div class="teclado" id="elem3" onclick='chequearElemento(this.id)'></div>
+		<div class="touchpad" id="elem4" onclick='chequearElemento(this.id)'></div>
+		<div class="mouse" id="elem5" onclick='chequearElemento(this.id)'></div>
+	</div>
+	</div>
+	<div class="elemento" id="cartel1">WEBCAM</div>
+	<div class="elemento" id="cartel2">PANTALLA</div>
+	<div class="elemento" id="cartel3">TECLADO</div>
+	<div class="elemento" id="cartel4">MOUSE</div>
+	<div class="elemento" id="cartel5">TOUCHPAD</div>
+</div>
+
+<div class="escena" id="escena-2">
+	<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	<div class="netbook-interior"></div>
+</div>
+
+<script>
+$(document).ready(function() {
+	var $window = $(window),
+		originalSize = {
+			ancho: $window.width(),
+			alto: $window.height()
+		};
+	$window.resize(function(e){
+		console.log(originalSize.ancho);
+		var nuevoSize = {
+			ancho: $window.width(),
+			alto: $window.height()
+		};
+		
+		var factor = nuevoSize.ancho / originalSize.ancho;
+		console.log(factor);
+		var originalScale = $('#netbook').css('transform');
+		console.log(originalScale);
+		$('#netbook').css('transform', 'scale(' + 0.5*factor + ')');
+	});
+});
+</script>
+</body>
+</html>

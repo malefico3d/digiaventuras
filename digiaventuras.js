@@ -71,3 +71,6 @@ function chequearElemento(id) {
 		alert("CORRECTO");
 	}
 }
+
+
+
