@@ -24,30 +24,39 @@
 </head>
 <body>
 <div class="portada" id="escena-0">
-	<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label">¡A JUGAR!</div></div>
-	<div class="logo-aprender"></div>
-	<div class="contenedor">
+	<div class="contenedor" id="cabecera">
+		<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label">¡A JUGAR!</div></div>
+		<div class="logo-aprender"></div>
+		<div class="logo-ME"></div>
+	</div>
+	<div class="contenedor" id="titulo">
 		<div class="logo-digiaventuras"></div>
 		<div class="fondo-titulo"><div class="texto-titulo">La compu por dentro</div></div>
 	</div>
-	<div class="logo-ME"></div>
+	
 </div>
 <div class="escena" id="escena-1">
-	<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
-	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
-	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
-	<div class="netbook">
-		<div class="webcam" id="elem1" onclick='chequearElemento(this.id)'></div>
-		<div class="pantalla" id="elem2" onclick='chequearElemento(this.id)'></div>
-		<div class="teclado" id="elem3" onclick='chequearElemento(this.id)'></div>
-		<div class="touchpad" id="elem4" onclick='chequearElemento(this.id)'></div>
-		<div class="mouse" id="elem5" onclick='chequearElemento(this.id)'></div>
+	<div class="contenedor" id="cabecera-actividad">
+		<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+		<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+		<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	</div>
+	<div class="contenedor" id="netbook">
+		<div class="netbook">
+			
+			<!--<div class="webcam" id="elem1" onclick='chequearElemento(this.id)'></div>-->
+			<div class="cont"></div><div class="pantalla" id="elem2" onclick='chequearElemento(this.id)'></div></div>
+			<!--<div class="teclado" id="elem3" onclick='chequearElemento(this.id)'></div>
+			<div class="touchpad" id="elem4" onclick='chequearElemento(this.id)'></div>
+			<div class="mouse" id="elem5" onclick='chequearElemento(this.id)'></div>-->
+		</div>
 	</div>
 	<div class="elemento" id="cartel1">WEBCAM</div>
 	<div class="elemento" id="cartel2">PANTALLA</div>
 	<div class="elemento" id="cartel3">TECLADO</div>
 	<div class="elemento" id="cartel4">MOUSE</div>
 	<div class="elemento" id="cartel5">TOUCHPAD</div>
+	
 </div>
 
 <div class="escena" id="escena-2">

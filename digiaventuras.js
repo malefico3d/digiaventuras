@@ -62,8 +62,9 @@ function mostrarProximoElemento() {
 
 function chequearElemento(id) {
 /*	alert(id);*/
-	e = id.substr(id.lenght - 1);
-	if (id != "cartel" + e){
+	var n = id.length;
+	var e = id.charAt(n-1);
+	if (e != elemento_actual){
 		alert("No es el elemento");
 	}
 	else {
