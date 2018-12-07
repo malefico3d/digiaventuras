@@ -42,8 +42,7 @@ function mostrarProximaEscena() {
 	}
 }
 
-function mostrarProximoElemento() {
-
+function resetCarteles(){
 	for (var c=1; c<6; c++) {
 		var id = "cartel" + c;
 		var cartel = document.getElementById(id);
@@ -51,13 +50,21 @@ function mostrarProximoElemento() {
 			cartel.style.display='none';
 		}
 	}
+}
+
+function mostrarCartel(){
 	var id = "cartel" + elemento_actual;
 	var cartel_actual = document.getElementById(id);
 	if (cartel_actual != null) { 
 		cartel_actual.style.display='block';
-		elemento_actual++;
-		if (elemento_actual > 5){ elemento_actual=1; }
 	}
+}
+
+function mostrarProximoElemento() {
+	resetCarteles();
+	elemento_actual++;
+	if (elemento_actual > 5){ elemento_actual=1; }
+	mostrarCartel();
 }
 
 function chequearElemento(id) {
@@ -65,12 +72,28 @@ function chequearElemento(id) {
 	var n = id.length;
 	var e = id.charAt(n-1);
 	if (e != elemento_actual){
-		alert("No es el elemento");
+		/*alert("No es el elemento");*/
+		mostrarVentana("error");
 	}
 	else {
-		alert("CORRECTO");
+		mostrarVentana("muybien");
+		/*elemento_actual+=1;
+		if(elemento_actual>5){elemento_actual=1;}*/
+		mostrarProximoElemento();
 	}
 }
 
+function mostrarVentana(id) {
+	/*alert(id);*/
+	var ventana = document.getElementById(id);
+	ventana.style.animation = 'aparece 300ms linear';
+	ventana.style.display = 'block';
+}
 
+function cerrarVentana(id) {
+	/*alert(id);*/
+	var ventana = document.getElementById(id);
+	ventana.style.animation = 'desaparece 100ms linear';
+	ventana.style.display = 'none';
+}
 
