@@ -24,9 +24,10 @@
 	<link rel="stylesheet" type="text/css" href="digiaventuras-noresize.css">
 </head>
 <body>
+<div class="app">
 <div class="portada" id="escena-0">
 	<div class="contenedor" id="cabecera">
-		<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label">¡A JUGAR!</div></div>
+		<div class="boton-jugar" onclick='mostrarEscena(1)'><div class="label">¡A JUGAR!</div></div>
 		<div class="logo-aprender"></div>
 		<div class="logo-ME"></div>
 	</div>
@@ -37,8 +38,8 @@
 	
 </div>
 <div class="escena" id="escena-1">
-	<div class="contenedor" id="cabecera-actividad">
-		<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+	<div class="contenedor" id="cabecera-actividad1">
+		<div class="info">HACÉ CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
 		<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
 		<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
 	</div>
@@ -55,19 +56,44 @@
 		<div class="cartel" id="cartel3">TECLADO</div>
 		<div class="cartel" id="cartel4">TOUCHPAD</div>
 		<div class="cartel" id="cartel5">MOUSE</div>
-		<div class="felicitaciones" id="muybien"><button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>¡MUY BIEN!</div>
-		<div class="error" id="error"><button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>¡NO ES ESE EL ELEMENTO!</div>
+		
 	</div>
 	
 </div>
 
 <div class="escena" id="escena-2">
-	<div class="info">HACE CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
-	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
-	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
-	<div class="netbook-interior"></div>
+	<div class="contenedor" id="cabecera-actividad2">
+		<div class="info">HACÉ CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
+		<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+		<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	</div>
+	<div class="contenedor" id="cont-netbook-interior">
+		<div class="netbook-interior" id="netbook-interior">
+			<div class="procesador" id="elem6" onclick='chequearElemento(this.id)'></div>
+			<div class="discoduro" id="elem7" onclick='chequearElemento(this.id)'></div>			
+		</div>
+		<div class="cartel" id="cartel6">PROCESADOR</div>
+		<div class="cartel" id="cartel7">DISCO RÍGIDO</div>
+	</div>
+	
 </div>
 
+<div class="escena" id="escena-3">
+	<div class="info">GRACIAS POR JUGAR</div>
+	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
+	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+</div>
+
+<div class="felicitaciones" id="muybien">
+	<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+	¡MUY BIEN!
+</div>
+<div class="error" id="error">
+	<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+	¡NO ES ESE EL ELEMENTO!
+</div>
+
+</div>
 <!--
 <script>
 $(document).ready(function() {
