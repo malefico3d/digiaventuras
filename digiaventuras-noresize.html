@@ -21,19 +21,27 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
 	<title>DIGIAVENTURAS CAPITULO 1</title>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="digiaventuras-noresize.css">
 </head>
 <body>
+	
 <div class="app">
 <div class="portada" id="escena-0">
 	<div class="contenedor" id="cabecera">
 		<div class="boton-jugar" onclick='mostrarEscena(1)'><div class="label">¡A JUGAR!</div></div>
-		<div class="logo-aprender"></div>
+		<div class="logo-aprender">
+			
+		</div>
 		<div class="logo-ME"></div>
 	</div>
 	<div class="contenedor" id="titulo">
-		<div class="logo-digiaventuras"></div>
-		<div class="fondo-titulo"><div class="texto-titulo">La compu por dentro</div></div>
+		<div class="elioportada"></div>
+		<div class="lunaportada"></div>
+		<div class="logo-digiaventuras">
+			
+		</div>
+		<div class="fondo-titulo"><div class="texto-titulo">LA COMPU POR DENTRO</div></div>
 	</div>
 	
 </div>
@@ -61,6 +69,8 @@
 	
 </div>
 
+
+
 <div class="escena" id="escena-2">
 	<div class="contenedor" id="cabecera-actividad2">
 		<div class="info">HACÉ CLIC SOBRE EL SIGUIENTE ELEMENTO DE HARDWARE</div>
@@ -78,11 +88,16 @@
 	
 </div>
 
+<!-- ESCENA FINAL -->
+
 <div class="escena" id="escena-3">
 	<div class="info">GRACIAS POR JUGAR</div>
-	<div class="boton-anterior" onclick='mostrarProximoElemento()'></div>
-	<div class="boton-siguiente" onclick='mostrarProximoElemento()'></div>
+	<div class="boton-anterior" onclick='mostrarEscena(2)'></div>
+	<div class="boton-siguiente" onclick='mostrarProximaEscena()'></div>
 </div>
+
+
+<!-- MENSAJES DEL SISTEMA -->
 
 <div class="felicitaciones" id="muybien">
 	<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>

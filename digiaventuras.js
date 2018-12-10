@@ -1,4 +1,5 @@
 var escena_actual = 1;
+var ultimaEscena = 3;
 var elemento_actual = 1;
 
 /*class Escena {
@@ -35,6 +36,7 @@ function resetEscenas(){
 }
 
 function mostrarEscena(e) {
+	resetEscenas();
 	var id = "escena-" + e;
 	var escena = document.getElementById(id);
 	if (escena != null) { 
@@ -54,6 +56,7 @@ function resetCarteles(){
 }
 
 function mostrarCartel(){
+	resetCarteles();
 	var id = "cartel" + elemento_actual;
 	var cartel_actual = document.getElementById(id);
 	if (cartel_actual != null) { 
@@ -61,13 +64,27 @@ function mostrarCartel(){
 	}
 }
 
+function mostrarProximaEscena(){
+		resetEscenas();
+		escena_actual++;
+		if(escena_actual>ultimaEscena){
+			escena_actual=0;
+		}
+		mostrarEscena(escena_actual);
+		console.log(escena_actual);
+}
+
 function mostrarProximoElemento() {
 	resetCarteles();
 	elemento_actual++;
 	if (elemento_actual == 6 || elemento_actual==8){ 
-		escena_actual+=1;
-		mostrarEscena(escena_actual);
-		}
+		mostrarProximaEscena();
+		/*escena_actual+=1;
+		if(escena_actual>ultimaEscena){
+			escena_actual=0;
+		}*/
+		
+	}
 	mostrarCartel();
 }
 

@@ -33,6 +33,35 @@ body {
     display: block;
 }
 
+.elioportada, .lunaportada {
+	pointer-events: none;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	position: absolute;
+	top: -75%;
+	height: 139%;
+	margin: auto;
+	width: 90%;
+	border-style: none;
+	animation: ingresa-por-abajo 500ms linear;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.elioportada {
+background-image: url("imagenes/elio5-1.svg");
+
+transform: translateX(-28%) rotate(15deg);
+}
+
+.lunaportada {
+background-image: url("imagenes/luna6-1.svg");
+    transform: translateX(-71%) rotate(-15deg);
+
+}
+
 #escena-1 {
 	
 }
@@ -78,6 +107,7 @@ width: 60%;
 top: 28%;
 height: 50%;
 
+
 }
 
 .contenedor#netbook {
@@ -99,9 +129,10 @@ height: 20%;
 
 .texto-titulo {
 	color: rgb(255,212,121);
-font-family: "arial";
+font-family: "Barlow Condensed", sans-serif;
 font-size: 41px;
 text-align: center;
+font-weight: bold;
 }
 .fondo-titulo {
 	background-color: rgb(0,84,147);
@@ -110,6 +141,7 @@ height: 69px;
 box-shadow: rgb(118,118,118) 0px 0px 15px;
 width: 60%;
 margin: auto;
+animation: aparece 400ms linear;
 }
 
 .logo-digiaventuras {
@@ -123,6 +155,7 @@ height: 212px;
 margin: auto;
 width: 90%;
 border-style: none;
+z-index: 20;
 }
 
 .logo-aprender {
@@ -133,8 +166,8 @@ background-size: contain;
 background-position: center center;
 width: 31%;
 position: relative;
-left: -36%;
-height: 61px;
+left: -31%;
+height: 44%;
 top: -92px;
 margin: auto;
 /*border-style: dashed;*/
@@ -147,9 +180,9 @@ margin: auto;
   	background-position: center center;
   	position:relative;
 width: 32%;
-right: -42%;
+right: -34%;
 top: -145px;
-height: 36px;
+height: 33%;
 margin: auto;
 /*border-style: dashed;*/
 }
@@ -443,4 +476,14 @@ left:522px;
 @keyframes desaparece {
 	0% {transform: scale(1);}
 	100% {transform: scale(0);}
+}
+
+@keyframes ingresa-por-abajo {
+	0% {top:-20%;
+		height:80%;
+		}
+	100% {top: -75%;
+		height:139%;
+		}
+	
 }
