@@ -26,7 +26,7 @@ var elemento_actual = 1;
 }*/
 
 function resetEscenas(){
-	for (var e=0; e<3; e++) {
+	for (var e=0; e<=ultimaEscena; e++) {
 		var id = "escena-" + e;
 		var escena = document.getElementById(id);
 		if (escena != null) { 
@@ -41,6 +41,9 @@ function mostrarEscena(e) {
 	var escena = document.getElementById(id);
 	if (escena != null) { 
 		escena.style.display='block';
+		if(e==1){
+			mostrarCartel();
+		}
 	}
 }
 
@@ -77,8 +80,12 @@ function mostrarProximaEscena(){
 function mostrarProximoElemento() {
 	resetCarteles();
 	elemento_actual++;
+	console.log(elemento_actual);
 	if (elemento_actual == 6 || elemento_actual==8){ 
 		mostrarProximaEscena();
+		if(elemento_actual==8){
+			elemento_actual=1;
+		}
 		/*escena_actual+=1;
 		if(escena_actual>ultimaEscena){
 			escena_actual=0;
