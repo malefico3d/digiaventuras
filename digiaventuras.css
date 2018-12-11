@@ -8,6 +8,18 @@ body {
 	height:100%;
 }
 
+.app {
+	width: 100%;
+    position: relative;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right:0px;
+    bottom:0px;
+    display: block;
+    overflow:hidden;
+}
+
 .portada {
   	background-image: url("imagenes/EXTERIOR_ARCOIRIS2-1.png");
   	background-repeat:no-repeat;
@@ -19,6 +31,35 @@ body {
     top: 0px;
     left: 0px;
     display: block;
+}
+
+.elioportada, .lunaportada {
+	pointer-events: none;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	position: absolute;
+	top: -75%;
+	height: 139%;
+	margin: auto;
+	width: 90%;
+	border-style: none;
+	animation: ingresa-por-abajo 500ms linear;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.elioportada {
+background-image: url("imagenes/elio5-1.svg");
+
+transform: translateX(-28%) rotate(15deg);
+}
+
+.lunaportada {
+background-image: url("imagenes/luna6-1.svg");
+    transform: translateX(-71%) rotate(-15deg);
+
 }
 
 #escena-1 {
@@ -51,7 +92,7 @@ body {
 	
 position: relative;
 margin: auto;
-border-style: dashed;
+border-style: none;
 
 }
 
@@ -66,6 +107,7 @@ width: 60%;
 top: 28%;
 height: 50%;
 
+
 }
 
 .contenedor#netbook {
@@ -73,7 +115,7 @@ width: 85%;
 top: 5%;
 height: 70%;
 }
-.contenedor#cabecera-actividad {
+.contenedor#cabecera-actividad1, .contenedor#cabecera-actividad2 {
 width: 97%;
 top: 1%;
 height: 20%;
@@ -87,9 +129,10 @@ height: 20%;
 
 .texto-titulo {
 	color: rgb(255,212,121);
-font-family: "arial";
+font-family: "Barlow Condensed", sans-serif;
 font-size: 41px;
 text-align: center;
+font-weight: bold;
 }
 .fondo-titulo {
 	background-color: rgb(0,84,147);
@@ -98,6 +141,7 @@ height: 69px;
 box-shadow: rgb(118,118,118) 0px 0px 15px;
 width: 60%;
 margin: auto;
+animation: aparece 400ms linear;
 }
 
 .logo-digiaventuras {
@@ -110,7 +154,8 @@ top: 0px;
 height: 212px;
 margin: auto;
 width: 90%;
-border-style: dashed;
+border-style: none;
+z-index: 20;
 }
 
 .logo-aprender {
@@ -121,8 +166,8 @@ background-size: contain;
 background-position: center center;
 width: 31%;
 position: relative;
-left: -36%;
-height: 61px;
+left: -31%;
+height: 44%;
 top: -92px;
 margin: auto;
 /*border-style: dashed;*/
@@ -135,9 +180,9 @@ margin: auto;
   	background-position: center center;
   	position:relative;
 width: 32%;
-right: -42%;
+right: -34%;
 top: -145px;
-height: 36px;
+height: 33%;
 margin: auto;
 /*border-style: dashed;*/
 }
@@ -162,28 +207,57 @@ padding: 8px;
   	
 }
 
+.contenedor#cont-netbook, .contenedor#cont-netbook-interior {
+	position: relative;
+	width: 80%;
+	height: 60%;
+	top: 1%;
+	/*margin: auto;*/
+	border-style: none;
+}
+
 .netbook {
 	background-image: url("imagenes/net1.png");
 	background-repeat:no-repeat;
   	background-size: contain;
   	background-position: center center;
-  	position: relative;
-  	width:100%;
-  	height:100%;
-  	top:0%;
-  	left:0%;
+  	position: absolute;
+  	width:1143px;
+  	height:688px;
+  	top:0;
+  	left:0;
+  	bottom: 0;
+  	right:0;
+  	transform-style:flat;
+  	transform-origin: left, top;
+  	transform: scale(0.5) translateX(-50%) translateY(-50%);
+  	border-style:none;
 }
+
+
+/*
+.contenedor#cont-netbook:before{
+	content:"";
+	display: block;
+	padding-top:100%;
+}*/
 
 .netbook-interior {
 	background-image: url("imagenes/netbook3.png");
 	background-repeat:no-repeat;
-  	background-size: cover;
+  	background-size: contain;
   	background-position: center center;
   	position: absolute;
-  	width:100%;
+  	width:1243px;
   	height:728px;
-  	top:0px;
-  	left:0px;
+ 	top:0;
+  	left:0;
+  	bottom: 0;
+  	right:0;
+  	transform-style:flat;
+  	transform-origin: left, top;
+  	transform: scale(0.5) translateX(-50%) translateY(-50%);
+  	border-style:none;
 }
 
 .boton-jugar {
@@ -236,13 +310,10 @@ background-image: url("imagenes/back1.svg");
 background-image: url("imagenes/back2.svg");
 }
 
-
 /* OVERLAYS */
 
-.elemento {
+.cartel {
 	display: none;
-	width: 400px;
-	height:4em;
 	background-color: rgb(224, 99, 55);
   	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.506) 0px 0px 15px;
@@ -251,31 +322,27 @@ background-image: url("imagenes/back2.svg");
 	font-size:2em;
 	color: white;
 	position: absolute;
-	top: 298px;
+	top: 20%;
 	left: 68%;
-}
-.cont {
-	position:relative;
-	width: 100%;
-	height: 100%;
-	margin: auto;
-	top: 0px;
-	left: 0px;
-}
-.teclado, .mouse, .pantalla, .touchpad, .webcam {
-	background-repeat: no-repeat;
-	background-size: contain;
-	position:absolute;
-	background-position: center center;
-	opacity: 0;
-	border-style:dashed;
+	padding: 15px;
 }
 
-.teclado:hover, .mouse:hover, .pantalla:hover, .touchpad:hover, .webcam:hover {
+.cartel#cartel1 {
+	display:block
+}
+.teclado, .mouse, .pantalla, .touchpad, .webcam, .procesador, .discoduro {
 	background-repeat: no-repeat;
 	background-size: contain;
-	position:absolute;
-	/*animation-fill-mode: both;*/
+	position:relative;
+	opacity: 0;
+	
+}
+
+.teclado:hover, .mouse:hover, .pantalla:hover, .touchpad:hover, .webcam:hover, .procesador:hover, .discoduro:hover {
+	background-repeat: no-repeat;
+	background-size: contain;
+	position:relative;
+	animation-fill-mode: both;
 	cursor: pointer;
 	/*animation-direction: alternate;*/
 	animation: suave 750ms infinite;
@@ -304,13 +371,12 @@ height:150px;
 top:-130px;
 left:921px;
 }
-
 .pantalla{
-	background-image: url("imagenes/pantalla.png");
-	width: 57%;
-	height: 57%;
-	top:7%;
-	left:3%;
+background-image: url("imagenes/pantalla.png");
+width:605px;
+height:369px;
+top:32px;
+left:46px;
 }
 
 .touchpad{
@@ -321,6 +387,68 @@ top:40px;
 left:420px;
 }
 
+.procesador{
+background-image: url("imagenes/cpu.png");
+width:245px;
+height:111px;
+top:508px;
+left:278px;
+}
+
+.discoduro {
+background-image: url("imagenes/hdd.png");
+width:359px;
+height:133px;
+top:371px;
+left:522px;
+}
+
+.felicitaciones {
+	background-color: rgb(142,250,0);
+	color: green;
+	margin:auto;
+	position:relative;
+	width:40%;
+	text-align:center;
+	font-family:arial;
+	font-size:2em;
+	font-weight: bold;
+	padding:20px;
+	top:50%;
+	display: none;
+	border-radius:20px;
+	box-shadow: 10px 10px #50505050;
+	animation: aparece 500ms linear;
+}
+
+.error {
+	background-color: red;
+	color: white;
+	margin:auto;
+	position:relative;
+	width:40%;
+	text-align:center;
+	font-family:arial;
+	font-size:2em;
+	font-weight: bold;
+	padding:20px;
+	top:50%;
+	display: none;
+	border-radius:20px;
+	box-shadow: 10px 10px #50505050;
+	animation: aparece 500ms linear;
+}
+
+.btn-cerrar {
+	background-color: red;
+	width: 30px;
+	height:30px;
+	position: absolute;
+	top: 10px; 
+	left: 10px;
+	border-radius:15px;
+	border-style: flat;
+}
 
 /* ANIMACIONES */
 @keyframes titila {
@@ -338,4 +466,24 @@ left:420px;
 	0% {opacity: 0;}
 	50% {opacity: 1;}
 	100% {opacity: 0;}
+}
+
+@keyframes aparece {
+	0% {transform: scale(0);}
+	100% {transform: scale(1);}
+}
+
+@keyframes desaparece {
+	0% {transform: scale(1);}
+	100% {transform: scale(0);}
+}
+
+@keyframes ingresa-por-abajo {
+	0% {top:-20%;
+		height:80%;
+		}
+	100% {top: -75%;
+		height:139%;
+		}
+	
 }
