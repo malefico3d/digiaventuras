@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="digiaventuras.js"></script>
+	<script src="js/pasapalabra.js"></script>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>DIGIAVENTURAS PASAPALABRA</title>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="digiaventuras.css">
+	<link rel="stylesheet" type="text/css" href="css/pasapalabra.css">
+</head>
+<body>
+	
+<div class="app">
+<div class="portada" id="escena-0">
+	<div class="contenedor" id="cabecera">
+		<div class="boton-jugar" onclick='mostrarEscena(1)'><div class="label">¡A JUGAR!</div></div>
+		<div class="logo-aprender">
+			
+		</div>
+		<div class="logo-ME"></div>
+	</div>
+	<div class="contenedor" id="titulo">
+		<div class="elioportada"></div>
+		<div class="lunaportada"></div>
+		<div class="logo-digiaventuras">
+			
+		</div>
+		<div class="fondo-titulo"><div class="texto-titulo">PASAPALABRA</div></div>
+	</div>
+	
+</div>
+<div class="escena" id="escena-1">
+	<div class="contenedor" id="cabecera-actividad1">
+		<section>
+        <div id="letters" class="div_letter">
+            <span class="">A</span>
+            <span class="">B</span>
+            <span class="">C</span>
+            <span class="">D</span>
+            <span class="">E</span>
+            <span class="">F</span>
+            <span class="">G</span>
+            <span class="">H</span>
+            <span class="">I</span>
+            <span class="">J</span>
+            <span class="">K</span>
+            <span class="">L</span>
+            <span class="">M</span>
+            <span class="">N</span>
+            <span class="">Ñ</span>
+            <span class="">O</span>
+            <span class="">P</span>
+            <span class="">Q</span>
+            <span class="">R</span>
+            <span class="">S</span>
+            <span class="">T</span>
+            <span class="">U</span>
+            <span class="">V</span>
+            <span class="">W</span>
+            <span class="">X</span>
+            <span class="">Y</span>
+            <span class="">Z</span>
+        </div>
+        <button id="jugar">Play</button>
+        <div id="partida" class="hidden">
+            <div id="div_question">
+                <h2 id="letter">Cargando</h2>
+                <h3 id="definition">Cargando</h3>
+                <input id="word" type="text" name="" autocomplete="off" placeholder="Escribir la palabra">
+                <button id="send">Ok</button>
+                <button id="pasapalabra">Pasapalabra</button>
+            </div>
+        </div>
+        <div id="terminado" class="hidden">
+            <div>
+                <h2>Puntación:</h2>
+                <h3><span id="marcador">0</span> de 27 palabras.</h3>
+            </div>
+            <button id="volver a jugar">Volver a jugar</button>
+        </div>
+    </section>
+
+	</div>
+</div>
+
+
+<!-- ESCENA FINAL -->
+
+	<div class="escena" id="escena-3">
+		<div class="info">GRACIAS POR JUGAR</div>
+		<div class="boton-anterior" onclick='mostrarEscena(2)'></div>
+		<div class="boton-siguiente" onclick='mostrarProximaEscena()'></div>
+	</div>
+
+
+<!-- MENSAJES DEL SISTEMA -->
+
+	<div class="felicitaciones" id="muybien">
+		<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+		¡MUY BIEN!
+	</div>
+	<div class="error" id="error">
+		<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+		¡NO ES ESE EL ELEMENTO!
+	</div>
+
+</div>
+</body>
+</html>

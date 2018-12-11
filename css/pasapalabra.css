@@ -1,0 +1,179 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+body{
+	background-color:#FCFCFC;
+	font-family:'Roboto', sans-serif;
+	font-size:16px;
+}
+header{
+	background-color:rgba(74,189,172,0.8);
+	color:#FFF;
+	text-shadow:0 0 3px #373737;
+}
+header h1{
+	line-height:90px;
+	font-size:3rem;
+	font-weight:500;
+	letter-spacing:1px;
+	text-align:center;
+	box-shadow:0 0 10px #373737;
+}
+section{
+	padding:50px 60px;
+	text-align:center;
+}
+h2{color:#FF4848;}
+h3{color:#2966B8;}
+.div_letter{
+	max-width:500px;
+	margin:0 auto;
+}
+.div_letter span{
+display: inline-block;
+background-color: #048ED3;
+font-size: 1.7rem;
+text-align: center;
+line-height: 60px;
+color: #FFF;
+text-shadow: 0 0 2px #FFF;
+width: 65px;
+margin: 8px 5px;
+border: 2px solid #FFF;
+box-shadow: 0 0 2px 1px #373737;
+border-radius: 60px;
+}
+#send,
+button{
+	cursor:pointer;
+	background-color:rgba(244,137,48,0.9);
+	font-size:1.4rem;
+	font-weight:600;
+	color:#FFF;
+	text-shadow:0 0 5px #373737;
+	letter-spacing:0.5px;
+	padding:7px 30px;
+	border:2px solid #fff;
+	box-shadow:0 0 2px 1px #373737;
+}
+#send:active,
+button:active{
+	box-shadow:0 0 2px 2px #373737;
+	background-color:rgba(247,183,51,0.9)
+}
+button:hover{
+	opacity:0.9;
+}
+#jugar{
+	margin-top:7%;
+}
+#terminado,
+#partida{
+	padding:10px;
+}
+#div_question{
+	position:relative;
+	max-width:700px;
+	margin:0 auto;
+	padding:10px;
+}
+#div_question #definition,
+#div_question #letter {
+	line-height:30px;
+	font-size:1.3rem;
+}
+#div_question #definition {
+	font-weight:300;
+	font-size:1rem;
+}
+#div_question #word {
+	font-size:1.2rem;
+	padding:5px 10px;
+	margin:20px 10px 20px 0;
+	border:2px solid #048ED3;
+	outline:none;
+	box-shadow:0 0 1px 1px #048ED3;
+}
+#send {
+	font-size:1rem;
+	font-weight:500;
+	padding:6px 25px;
+	margin:0 auto;
+}
+#pasapalabra {
+	display:block;
+	background-color:#5D9CC6;
+	font-size:1.1rem;
+	font-weight:500;
+	margin:0 auto;
+	margin-top:10px;
+}
+#pasapalabra:active {
+	background-color:#70ADD8;
+}
+#terminado h2{
+	line-height:40px;
+}
+#terminado h3{
+	line-height:40px;
+	margin-bottom: 20px;
+}
+.hidden{display:none;}
+.letter-true{background-color:#15991B !important;}
+.letter-false{background-color:#DB0618 !important;}
+@media screen and (max-width:600px){
+	header h1{
+		line-height:60px;
+		font-size:2rem;
+	}
+	section{
+		padding:25px 30px;
+	}
+	.div_letter{
+		max-width:100%;
+	}
+}
+@media screen and (max-width:490px){
+	section{
+		padding:15px 20px;
+	}
+	.div_letter span{
+		font-size:1.3rem;
+		line-height:30px;
+		width:35px;
+		margin:6px 4px;
+	}
+}
+@media screen and (max-width:350px){
+	section{
+		padding:5px;
+	}
+	.div_letter span{
+		font-size:1rem;
+		line-height:23px;
+		width:25px;
+		margin:6px 4px;
+		display: inline-block;
+		border-radius: 60px;
+	}
+	#partida{
+		padding-top:10px;
+	}
+	#div_question{
+		max-width:700px;
+		padding:0px;
+	}
+	#div_question #word {
+		display:block;
+		margin:20px auto;
+	}
+	#pasapalabra{
+		margin-top:25px;
+	}
+}
