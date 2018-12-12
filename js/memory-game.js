@@ -23,7 +23,7 @@ const cards = document.querySelectorAll('.memory-card');
   }
 
   function checkForMatch() {
-    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
   }
 
