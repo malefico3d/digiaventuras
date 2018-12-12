@@ -4,14 +4,15 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="digiaventuras.js"></script>
-	<script src="js/wordfind.js"></script>
-	<script src="js/wordfindgame.js"></script>
+	<script type="text/javascript" src="js/wordfind.js"></script> 
+    <script type="text/javascript" src="js/wordfindgame.js"></script> 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
 	<title>DIGIAVENTURAS SOPA DE LETRAS</title>
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="digiaventuras.css">
 	<link rel="stylesheet" type="text/css" href="css/sopaletras.css">
+	<link rel="stylesheet" type="text/css" href="css/wordfind.css">
 </head>
 <body>
 	
@@ -38,16 +39,24 @@
 	<div class="contenedor" id="cabecera-actividad1">
 		<div class="info">RESOLVE LA SOPA DE LETRAS</div>
 	</div>
-	<div class="contenedor" id="cont-netbook">
-		<!-- Add required markup -->
+
+   <div id="main" role="main">
+        
+    </div>
+
+       <!-- Add required markup -->
         <div id="puzzle-container"></div>
         <div id="puzzle-words"></div>
-        <input type="button" id="solveBTN" value="Solve puzzle"/>
-        
-		<script>
+        <input type="button" id="solveBTN" value="Resolver"/>
+
+        <!-- Add dependencies -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+        <script src="js/wordfind.js"></script>
+        <script src="js/wordfindgame.js"></script>
+        <!-- Add our logic -->
+        <script>
             // An array with the words to show
-            var words = ['monitor', 'teclado', 'mouse','procesador'
-           ];
+            var words = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo' ];
 
             // Start a basic word game without customization !
             var gamePuzzle = wordfindgame.create(words, '#puzzle-container', '#puzzle-words');
@@ -58,8 +67,8 @@
                 console.log(result);
             });
         </script>
-	</div>
-</div>
+
+
 
 
 <!-- ESCENA FINAL -->
