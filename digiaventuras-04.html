@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="digiaventuras.js"></script>
+	<script src="js/memory-game.js"></script>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>DIGIAVENTURAS SOPA DE LETRAS</title>
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="digiaventuras.css">
+	<link rel="stylesheet" type="text/css" href="css/memory-game.css">
+</head>
+<body>
+	
+<div class="app">
+<div class="portada" id="escena-0">
+	<div class="contenedor" id="cabecera">
+		<div class="boton-jugar" onclick='mostrarEscena(1)'><div class="label">¡A JUGAR!</div></div>
+		<div class="logo-aprender">
+			
+		</div>
+		<div class="logo-ME"></div>
+	</div>
+	<div class="contenedor" id="titulo">
+		<div class="elioportada"></div>
+		<div class="lunaportada"></div>
+		<div class="logo-digiaventuras">
+			
+		</div>
+		<div class="fondo-titulo"><div class="texto-titulo">MEMOTEST</div></div>
+	</div>
+	
+</div>
+<div class="escena" id="escena-1">
+	<div class="contenedor" id="cabecera-actividad1">
+		<div class="info">RESOLVE EL MEMOTEST</div>
+	</div>
+	<div class="contenedor" id="cont-netbook">
+		<!-- Add required markup -->
+        <section class="memory-game">
+			<div class="memory-card" data-framework="react">
+				<img class="front-face" src="imagenes/memory-game/react.svg" alt="React">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="react">
+				<img class="front-face" src="imagenes/memory-game/react.svg" alt="React">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="angular">
+				<img class="front-face" src="imagenes/memory-game/angular.svg" alt="Angular">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="angular">
+				<img class="front-face" src="imagenes/memory-game/angular.svg" alt="Angular">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="ember">
+				<img class="front-face" src="imagenes/memory-game/ember.svg" alt="Ember">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="ember">
+				<img class="front-face" src="imagenes/memory-game/ember.svg" alt="Ember">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="vue">
+				<img class="front-face" src="imagenes/memory-game/vue.svg" alt="Vue">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="vue">
+				<img class="front-face" src="imagenes/memory-game/vue.svg" alt="Vue">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="backbone">
+				<img class="front-face" src="imagenes/memory-game/backbone.svg" alt="Backbone">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="backbone">
+				<img class="front-face" src="imagenes/memory-game/backbone.svg" alt="Backbone">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="aurelia">
+				<img class="front-face" src="imagenes/memory-game/aurelia.svg" alt="Aurelia">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			  </div>
+
+			<div class="memory-card" data-framework="aurelia">
+				<img class="front-face" src="imagenes/memory-game/aurelia.svg" alt="Aurelia">
+				<img class="back-face" src="imagenes/memory-game/js-badge.svg" alt="Memory Card">
+			</div>
+		</section>
+        
+	</div>
+</div>
+
+
+<!-- ESCENA FINAL -->
+
+	<div class="escena" id="escena-3">
+		<div class="info">GRACIAS POR JUGAR</div>
+		<div class="boton-anterior" onclick='mostrarEscena(2)'></div>
+		<div class="boton-siguiente" onclick='mostrarProximaEscena()'></div>
+	</div>
+
+
+<!-- MENSAJES DEL SISTEMA -->
+
+	<div class="felicitaciones" id="muybien">
+		<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+		¡MUY BIEN!
+	</div>
+	<div class="error" id="error">
+		<button class="btn-cerrar" type="button" onclick='cerrarVentana(this.parentNode.id)'>X</button>
+		¡NO ES ESE EL ELEMENTO!
+	</div>
+
+</div>
+</body>
+</html>
