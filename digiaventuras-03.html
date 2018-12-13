@@ -59,7 +59,15 @@
             var words = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo' ];
 
             // Start a basic word game without customization !
+            
+            // NOTA
+            // Ejemplo para modificar el tamaño de la sopa ->
+            // var gamePuzzle = wordfindgame.create(words, '#puzzle-container', '#puzzle-words', {height: 6, width:  6});
+            // tiene un límite mínimo de [cantidad de letras de la palabra más larga] +1
+            
             var gamePuzzle = wordfindgame.create(words, '#puzzle-container', '#puzzle-words');
+            
+
 
             $("#solveBTN").click(function(){
                 // Solve the puzzle !
