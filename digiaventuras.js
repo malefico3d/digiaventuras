@@ -1,6 +1,3 @@
-var escena_actual = 1;
-var ultimaEscena = 3;
-var elemento_actual = 1;
 
 /*class Escena {
 
@@ -72,6 +69,16 @@ function mostrarProximaEscena(){
 		escena_actual++;
 		if(escena_actual>ultimaEscena){
 			escena_actual=0;
+		}
+		mostrarEscena(escena_actual);
+		console.log(escena_actual);
+}
+
+function mostrarEscenaAnterior(){
+		resetEscenas();
+		escena_actual--;
+		if(escena_actual<0){
+			escena_actual=ultimaEscena;
 		}
 		mostrarEscena(escena_actual);
 		console.log(escena_actual);

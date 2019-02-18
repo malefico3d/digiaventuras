@@ -120,11 +120,13 @@ width: 97%;
 top: 1%;
 height: 20%;
 }
-.label {
+.label-portada {
   font-size: 31px;
   color:white;
   font-weight: bold;
   text-align:center;
+  box-sizing: initial;
+  font-family: Arial;
 }
 
 .texto-titulo {

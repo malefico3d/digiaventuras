@@ -12,13 +12,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="digiaventuras.css">
 	<link rel="stylesheet" type="text/css" href="css/pasapalabra.css">
+	<script>
+		/* inicializacion de variables del juego, para navegar entre las zonas */
+		var escena_actual = 0;
+		var ultimaEscena = 2;
+		/*var elemento_actual = 1;*/
+	</script>
 </head>
 <body>
 	
 <div class="app">
 <div class="portada" id="escena-0">
 	<div class="contenedor" id="cabecera">
-		<div class="boton-jugar" onclick='mostrarEscena(1)'><div class="label">¡A JUGAR!</div></div>
+		<div class="boton-jugar" onclick='mostrarProximaEscena()'><div class="label-portada">¡A JUGAR!</div></div>
 		<div class="logo-aprender">
 			
 		</div>
@@ -36,6 +42,9 @@
 </div>
 <div class="escena" id="escena-1">
 	<div class="contenedor" id="cabecera-actividad1">
+		<div class="info">RESOLVE EL PASAPALABRA</div>
+		<div class="boton-anterior" onclick='mostrarEscenaAnterior()'></div>
+		<div class="boton-siguiente" onclick='mostrarProximaEscena()'></div>
 		<section>
         <div id="letters" class="div_letter">
             <span class="">A</span>
@@ -66,7 +75,7 @@
             <span class="">Y</span>
             <span class="">Z</span>
         </div>
-        <button id="jugar">Play</button>
+        <button id="jugar">Jugar</button>
         <div id="partida" class="hidden">
             <div id="div_question">
                 <h2 id="letter">Cargando</h2>
@@ -91,9 +100,9 @@
 
 <!-- ESCENA FINAL -->
 
-	<div class="escena" id="escena-3">
+	<div class="escena" id="escena-2">
 		<div class="info">GRACIAS POR JUGAR</div>
-		<div class="boton-anterior" onclick='mostrarEscena(2)'></div>
+		<div class="boton-anterior" onclick='mostrarEscenaAnterior()'></div>
 		<div class="boton-siguiente" onclick='mostrarProximaEscena()'></div>
 	</div>
 
